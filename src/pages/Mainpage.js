@@ -1,4 +1,5 @@
 import React from 'react';
+import PictureUploadForm from '../components/PictureUploadForm';
 import '../styles/Mainpage.css';
 
 function Mainpage() {
@@ -13,6 +14,14 @@ function Mainpage() {
         <span></span>
         <li><div><p>Preview</p></div></li>
       </ul>
+
+      <div>
+        <form>
+            <div>
+              <PictureUploadForm />
+            </div>
+        </form>
+      </div>
     </div>
   );
 }
