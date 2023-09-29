@@ -85,3 +85,26 @@
   font-size: 0.8rem;
   color: #979797;
 }
+
+.info-div {
+  height: 100%;
+}
+
+.info-label {
+  font-size: 0.9rem;
+  font-weight: bolder;
+  float: left;
+}
+
+.info-label span {
+  font-size: 0.7rem;
+  font-weight: 100;
+}
+
+.info-input {
+  border: none;
+  border-bottom: 1px solid #c4c4c4;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
