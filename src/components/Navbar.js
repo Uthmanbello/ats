@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <div className="navbar">
       <ul>
-        <li><img src={hamburgerIcon} alt="hamburger icon" className="profile-pic" /></li>
+        <li><img src={hamburgerIcon} alt="hamburger icon" className="hamburger" /></li>
         <li><img src={homeIcon} alt="home icon" /></li>
         <li><img src={tasksIcon} alt="tasks icon" /></li>
         <li><img src={nt} alt="nt initials" /></li>
