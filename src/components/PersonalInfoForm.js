@@ -17,12 +17,12 @@ function PersonalInfoForm() {
         <div>
           <div className='row check-btns'>
             <span className='align-center'>
-              <input type="checkbox" id="phone-internal" name="phone-internal" className=''/>
+              <input type="checkbox" id="phone-internal" name="phone-internal" className='check-box'/>
               <label For="phone-internal" className='checkbox-label'>Internal</label>
             </span>
             <span className='align-center'>
-              <input type="checkbox" id="phone-hide" name="phone-hide" className=''/>
-              <label For="phone-hide" className='checkbox-label'>Hide</label>
+              <label For='phone-hide' class="toggle-label checkbox-label"><span class="slider round"></span>Hide</label>
+              <input type="checkbox" name="phone-hide" id="phone-hide" class="toggle-input" />
             </span>
           </div>
           <label For="phone" className='info-label'>Phone <span>(without dial code)</span></label>
