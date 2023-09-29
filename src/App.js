@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import PersonalInfoForm from './components/PersonalInfoForm';
 import Mainpage from './pages/Mainpage';
 import './styles/App.css';
 
