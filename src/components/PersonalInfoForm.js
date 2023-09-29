@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import plusSign from '../images/plus-sign.svg'
 
 function PersonalInfoForm() {
 
@@ -7,7 +8,7 @@ function PersonalInfoForm() {
       <div className='title'>
         <p>Personal information</p>
       </div>
-      <div className='upload-div'>
+      <div className='upload-div personal-info-div'>
         <label For="firstName" className='info-label'>First Name</label>
         <input type="text" id="firstName" name="firstName" className='info-input'/>
         <label For="lastName" className='info-label'>Last Name</label>
@@ -103,6 +104,11 @@ function PersonalInfoForm() {
           </div>
           <label For="gender" className='info-label'>Gender</label>
           <input type="text" id="gender" name="gender" className='info-input gender-input'/>
+        </div>
+
+        <div className='row add-question'>
+          <img src={plusSign} alt='plus sign'></img>
+          <p>Add a question</p>
         </div>
       </div>
     </div>

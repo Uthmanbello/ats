@@ -90,6 +90,10 @@
   height: 100%;
 }
 
+.personal-info-div {
+  padding-bottom: 4%;
+}
+
 .info-label {
   font-size: 0.9rem;
   font-weight: bolder;
@@ -166,4 +170,17 @@
 
 .toggle-input:checked + .slider:before {
   transform: translateX(15px);
+}
+
+.add-question {
+  gap: 15px;
+}
+
+.add-question img {
+  width: 15px;
+}
+
+.add-question p {
+  font-size: 0.7rem;
+  font-weight: bolder;
 }
