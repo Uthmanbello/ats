@@ -108,3 +108,13 @@
   width: 100%;
   margin-bottom: 20px;
 }
+
+.check-btns {
+  float: right;
+  gap: 7vw;
+}
+
+.checkbox-label {
+  font-size: 0.7rem;
+  font-weight: 100;
+}
