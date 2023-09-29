@@ -109,6 +109,10 @@
   margin-bottom: 20px;
 }
 
+.gender-input {
+  border: none;
+}
+
 .check-btns {
   float: right;
   gap: 5vw;
