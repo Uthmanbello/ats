@@ -4,11 +4,14 @@ import '../styles/Mainpage.css';
 function Mainpage() {
   return (
     <div className="mainpage">
-      <ul className='top-bar'>
-        <li>Program Details</li>
-        <li>Application form</li>
-        <li>Workflow</li>
-        <li>Preview</li>
+      <ul className='row top-bar'>
+        <li><div><p>Program Details</p></div></li>
+        <span></span>
+        <li><div><p>Application form</p></div></li>
+        <span></span>
+        <li><div><p>Workflow</p></div></li>
+        <span></span>
+        <li><div><p>Preview</p></div></li>
       </ul>
     </div>
   );

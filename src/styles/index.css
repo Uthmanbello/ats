@@ -6,3 +6,34 @@
 body {
   margin: 0;
 }
+
+li {
+  list-style: none;
+  margin: 0;
+}
+
+/* UTILITY */
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
