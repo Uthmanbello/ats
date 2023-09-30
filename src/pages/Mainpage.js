@@ -1,6 +1,7 @@
 import React from 'react';
 import PictureUploadForm from '../components/PictureUploadForm';
 import PersonalInfoForm from '../components/PersonalInfoForm';
+import ProfileForm from '../components/ProfileForm';
 import '../styles/Mainpage.css';
 
 function Mainpage() {
@@ -21,6 +22,7 @@ function Mainpage() {
             <div>
               <PictureUploadForm />
               <PersonalInfoForm />
+              <ProfileForm />
             </div>
         </form>
       </div>
