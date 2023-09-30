@@ -21,7 +21,7 @@ function ProfileForm() {
             </span>
           </div>
           <label For="education" className='info-label'>Education</label>
-          <input type="number" id="education" name="education" className='info-input'/>
+          <input type="text" id="education" name="education" className='info-input'/>
         </div>
 
         <div>
@@ -53,7 +53,7 @@ function ProfileForm() {
           <label For="resume" className='info-label'>Resume</label>
           <input type="text" id="resume" name="resume" className='info-input'/>
         </div>
-        
+
         <div className='row add-question'>
           <img src={plusSign} alt='plus sign'></img>
           <p>Add a question</p>
