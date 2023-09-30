@@ -16,8 +16,8 @@ function ProfileForm() {
               <label For="education-mandatory" className='checkbox-label'>Mandatory</label>
             </span>
             <span className='align-center'>
-              <label For='education-hide' class="toggle-label checkbox-label"><span class="slider round"></span>Hide</label>
-              <input type="checkbox" name="education-hide" id="education-hide" class="toggle-input" />
+              <label For='education-hide' className="toggle-label checkbox-label"><span className="slider round"></span>Hide</label>
+              <input type="checkbox" name="education-hide" id="education-hide" className="toggle-input" />
             </span>
           </div>
           <label For="education" className='info-label'>Education</label>
@@ -31,8 +31,8 @@ function ProfileForm() {
               <label For="experience-mandatory" className='checkbox-label'>Mandatory</label>
             </span>
             <span className='align-center'>
-              <label For='experience-hide' class="toggle-label checkbox-label"><span class="slider round"></span>Hide</label>
-              <input type="checkbox" name="experience-hide" id="experience-hide" class="toggle-input" />
+              <label For='experience-hide' className="toggle-label checkbox-label"><span className="slider round"></span>Hide</label>
+              <input type="checkbox" name="experience-hide" id="experience-hide" className="toggle-input" />
             </span>
           </div>
           <label For="experience" className='info-label'>Experience</label>
@@ -46,8 +46,8 @@ function ProfileForm() {
               <label For="resume-mandatory" className='checkbox-label'>Mandatory</label>
             </span>
             <span className='align-center'>
-              <label For='resume-hide' class="toggle-label checkbox-label"><span class="slider round"></span>Hide</label>
-              <input type="checkbox" name="resume-hide" id="resume-hide" class="toggle-input" />
+              <label For='resume-hide' className="toggle-label checkbox-label"><span className="slider round"></span>Hide</label>
+              <input type="checkbox" name="resume-hide" id="resume-hide" className="toggle-input" />
             </span>
           </div>
           <label For="resume" className='info-label'>Resume</label>

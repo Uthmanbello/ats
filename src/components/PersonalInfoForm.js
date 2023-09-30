@@ -23,8 +23,8 @@ function PersonalInfoForm() {
               <label For="phone-internal" className='checkbox-label'>Internal</label>
             </span>
             <span className='align-center'>
-              <label For='phone-hide' class="toggle-label checkbox-label"><span class="slider round"></span>Hide</label>
-              <input type="checkbox" name="phone-hide" id="phone-hide" class="toggle-input" />
+              <label For='phone-hide' className="toggle-label checkbox-label"><span className="slider round"></span>Hide</label>
+              <input type="checkbox" name="phone-hide" id="phone-hide" className="toggle-input" />
             </span>
           </div>
           <label For="phone" className='info-label'>Phone <span>(without dial code)</span></label>
@@ -38,8 +38,8 @@ function PersonalInfoForm() {
               <label For="nationality-internal" className='checkbox-label'>Internal</label>
             </span>
             <span className='align-center'>
-              <label For='nationality-hide' class="toggle-label checkbox-label"><span class="slider round"></span>Hide</label>
-              <input type="checkbox" name="nationality-hide" id="nationality-hide" class="toggle-input" />
+              <label For='nationality-hide' className="toggle-label checkbox-label"><span className="slider round"></span>Hide</label>
+              <input type="checkbox" name="nationality-hide" id="nationality-hide" className="toggle-input" />
             </span>
           </div>
           <label For="nationality" className='info-label'>Nationality</label>
@@ -53,8 +53,8 @@ function PersonalInfoForm() {
               <label For="residence-internal" className='checkbox-label'>Internal</label>
             </span>
             <span className='align-center'>
-              <label For='residence-hide' class="toggle-label checkbox-label"><span class="slider round"></span>Hide</label>
-              <input type="checkbox" name="residence-hide" id="residence-hide" class="toggle-input" />
+              <label For='residence-hide' className="toggle-label checkbox-label"><span className="slider round"></span>Hide</label>
+              <input type="checkbox" name="residence-hide" id="residence-hide" className="toggle-input" />
             </span>
           </div>
           <label For="residence" className='info-label'>Current Residence</label>
@@ -68,8 +68,8 @@ function PersonalInfoForm() {
               <label For="id-internal" className='checkbox-label'>Internal</label>
             </span>
             <span className='align-center'>
-              <label For='id-hide' class="toggle-label checkbox-label"><span class="slider round"></span>Hide</label>
-              <input type="checkbox" name="id-hide" id="id-hide" class="toggle-input" />
+              <label For='id-hide' className="toggle-label checkbox-label"><span className="slider round"></span>Hide</label>
+              <input type="checkbox" name="id-hide" id="id-hide" className="toggle-input" />
             </span>
           </div>
           <label For="id" className='info-label'>ID Number</label>
@@ -83,8 +83,8 @@ function PersonalInfoForm() {
               <label For="dob-internal" className='checkbox-label'>Internal</label>
             </span>
             <span className='align-center'>
-              <label For='dob-hide' class="toggle-label checkbox-label"><span class="slider round"></span>Hide</label>
-              <input type="checkbox" name="dob-hide" id="dob-hide" class="toggle-input" />
+              <label For='dob-hide' className="toggle-label checkbox-label"><span className="slider round"></span>Hide</label>
+              <input type="checkbox" name="dob-hide" id="dob-hide" className="toggle-input" />
             </span>
           </div>
           <label For="dob" className='info-label'>Date of Birth</label>
@@ -98,8 +98,8 @@ function PersonalInfoForm() {
               <label For="gender-internal" className='checkbox-label'>Internal</label>
             </span>
             <span className='align-center'>
-              <label For='gender-hide' class="toggle-label checkbox-label"><span class="slider round"></span>Hide</label>
-              <input type="checkbox" name="gender-hide" id="gender-hide" class="toggle-input" />
+              <label For='gender-hide' className="toggle-label checkbox-label"><span className="slider round"></span>Hide</label>
+              <input type="checkbox" name="gender-hide" id="gender-hide" className="toggle-input" />
             </span>
           </div>
           <label For="gender" className='info-label'>Gender</label>
