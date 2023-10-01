@@ -4,6 +4,7 @@ import PersonalInfoForm from '../components/PersonalInfoForm';
 import ProfileForm from '../components/ProfileForm';
 import AdditionalQuestionsForm from '../components/AdditionalQuestionsForm';
 import '../styles/Mainpage.css';
+import ApplicationForm from '../components/Test';
 
 function Mainpage() {
   return (
@@ -25,6 +26,7 @@ function Mainpage() {
               <PersonalInfoForm />
               <ProfileForm />
               <AdditionalQuestionsForm />
+              <ApplicationForm />
             </div>
         </form>
       </div>
