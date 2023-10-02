@@ -106,10 +106,10 @@ function PersonalInfoForm() {
           <input type="text" id="gender" name="gender" className='info-input gender-input'/>
         </div>
 
-        <div className='row add-question'>
+        <button className='row add-question align-center'>
           <img src={plusSign} alt='plus sign'></img>
           <p>Add a question</p>
-        </div>
+        </button>
       </div>
     </div>
   );

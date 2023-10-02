@@ -12,6 +12,11 @@ li {
   margin: 0;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 /* UTILITY */
 
 .row {
