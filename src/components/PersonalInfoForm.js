@@ -3,6 +3,16 @@ import plusSign from '../images/plus-sign.svg'
 
 function PersonalInfoForm() {
 
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const openPopup = (e) => {
+    e.preventDefault(); 
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+
   return (
     <div className='form-div info-div'>
       <div className='title'>
@@ -106,10 +116,21 @@ function PersonalInfoForm() {
           <input type="text" id="gender" name="gender" className='info-input gender-input'/>
         </div>
 
-        <button className='row add-question align-center'>
+        <button className='row add-question align-center' onClick={(e) => openPopup(e)}>
           <img src={plusSign} alt='plus sign'></img>
           <p>Add a question</p>
         </button>
+
+        {isPopupOpen && (
+          <div className='popup-container'>
+            <div className='popup'>
+              <button className='close-popup' onClick={closePopup}>
+                Close
+              </button>
+              <p>popup window.</p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
