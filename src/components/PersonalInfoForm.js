@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import plusSign from '../images/plus-sign.svg'
+import closeIcon from '../images/close-icon.svg'
 
 function PersonalInfoForm() {
 
@@ -123,12 +124,22 @@ function PersonalInfoForm() {
 
         {isPopupOpen && (
           <div className='popup-container'>
-            <div className='popup'>
+            {/* <div className='popup'> */}
               <button className='close-popup' onClick={closePopup}>
-                Close
+                <img src={closeIcon} alt='close icon'></img>
               </button>
-              <p>popup window.</p>
-            </div>
+              <div className='form-div info-div popup-div'>
+                <div className='title'>
+                  <p>Questions</p>
+                </div>
+                <div className='upload-div personal-info-div'>
+                  <div>
+                    <label htmlFor="education" className='info-label'>Type</label>
+                    <input type="text" id="education" name="education" className='info-input'/>
+                  </div>
+                </div>
+              </div>
+            {/* </div> */}
           </div>
         )}
       </div>
