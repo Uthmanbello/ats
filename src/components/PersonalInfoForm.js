@@ -14,6 +14,12 @@ function PersonalInfoForm() {
     setIsPopupOpen(false);
   };
 
+  const [selectedOption, setSelectedOption] = useState('Paragraph');
+
+  const handleSelectChange = (e) => {
+    setSelectedOption(e.target.value);
+  };
+
   return (
     <div className='form-div info-div'>
       <div className='title'>
@@ -124,7 +130,6 @@ function PersonalInfoForm() {
 
         {isPopupOpen && (
           <div className='popup-container'>
-            {/* <div className='popup'> */}
               <button className='close-popup' onClick={closePopup}>
                 <img src={closeIcon} alt='close icon'></img>
               </button>
@@ -134,12 +139,22 @@ function PersonalInfoForm() {
                 </div>
                 <div className='upload-div personal-info-div'>
                   <div>
-                    <label htmlFor="education" className='info-label'>Type</label>
-                    <input type="text" id="education" name="education" className='info-input'/>
+                    <label htmlFor="dropdown" className='info-label'>Type</label>
+                    <select id="dropdown" className='info-input info-textarea' value={selectedOption} onChange={handleSelectChange}>
+                      <option value="option1">Paragraph</option>
+                      <option value="option2">Short answer</option>
+                      <option value="option3">Yes/No</option>
+                      <option value="option4">Dropdown</option>
+                      <option value="option5">Multiple choice</option>
+                      <option value="option6">Date</option>
+                      <option value="option7">Number</option>
+                      <option value="option8">File upload</option>
+                      <option value="option9">Video question</option>
+                    </select>
+                    {/* <p>Selected Option: {selectedOption}</p> */}
                   </div>
                 </div>
               </div>
-            {/* </div> */}
           </div>
         )}
       </div>

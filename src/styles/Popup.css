@@ -28,4 +28,9 @@
   background-color: #ffffff;
   height: 50%;
   margin: auto;
+  margin-bottom: 20%;
+}
+
+.popup-div .info-label {
+  margin-bottom: 10px;
 }
