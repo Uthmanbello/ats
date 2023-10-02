@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import plusSign from '../images/plus-sign.svg'
 import closeIcon from '../images/close-icon.svg'
 import unorderedList from '../images/unordered-list.svg'
+import ParagraphQuestion from './ParagraphQuestion';
+import ShortQuestion from './ShortQuestion';
+import YesNoQuestion from './YesNoQuestion';
 
 function PersonalInfoForm() {
 
@@ -19,7 +22,19 @@ function PersonalInfoForm() {
 
   const handleSelectChange = (e) => {
     setSelectedOption(e.target.value);
-    closePopup();
+  };
+
+  const renderSelectedQuestion = () => {
+    switch (selectedOption) {
+      case 'Paragraph':
+        return <ParagraphQuestion />;
+      case 'Short answer':
+        return <ShortQuestion />;
+      case 'Yes or No':
+        return <YesNoQuestion />;
+      default:
+        return null;
+    }
   };
 
   return (
@@ -124,61 +139,6 @@ function PersonalInfoForm() {
           <label htmlFor="gender" className='info-label'>Gender</label>
           <input type="text" id="gender" name="gender" className='info-input gender-input'/>
         </div>
-        {selectedOption === 'Paragraph' && (
-          <>
-            <div>
-              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
-              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
-            </div>
-
-            <div className='row space-between align-center'>
-              <div className='row delete-question'>
-                <img src={closeIcon} alt='close icon'></img>
-                <p>Delete question</p>
-              </div>
-              <button className='save-btn'>Save</button>
-            </div>
-          </>
-        )}
-
-        {selectedOption === 'Short answer' && (
-          <>
-            <div>
-              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
-              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
-            </div>
-
-            <div className='row space-between align-center'>
-              <div className='row delete-question'>
-                <img src={closeIcon} alt='close icon'></img>
-                <p>Delete question</p>
-              </div>
-              <button className='save-btn'>Save</button>
-            </div>
-          </>
-        )}
-
-        {selectedOption === 'Yes or No' && (
-          <>
-            <div>
-              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
-              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
-            </div>
-
-            <div className='yes-no-check align-center'>
-              <input type="checkbox" id="" name="" className='check-box'/>
-              <label htmlFor="" className=''>Disqualify the candidate if the answer is no</label>
-            </div>
-
-            <div className='row space-between align-center'>
-              <div className='row delete-question'>
-                <img src={closeIcon} alt='close icon'></img>
-                <p>Delete question</p>
-              </div>
-              <button className='save-btn'>Save</button>
-            </div>
-          </>
-        )}
 
         {selectedOption === 'Dropdown' && (
           <>
@@ -356,6 +316,15 @@ function PersonalInfoForm() {
                       <option value="Video question">Video question</option>
                     </select>
                   </div>
+                  {selectedOption === 'Paragraph' && (
+                    renderSelectedQuestion()
+                  )}
+                  {selectedOption === 'Short answer' && (
+                    renderSelectedQuestion()
+                  )}
+                  {selectedOption === 'Yes or No' && (
+                    renderSelectedQuestion()
+                  )}
                 </div>
               </div>
           </div>
