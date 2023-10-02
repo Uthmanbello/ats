@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import plusSign from '../images/plus-sign.svg'
 import closeIcon from '../images/close-icon.svg'
-import unorderedList from '../images/unordered-list.svg'
 import editIcon from '../images/edit-icon.svg'
 import ParagraphQuestion from './ParagraphQuestion';
 import ShortQuestion from './ShortQuestion';
 import YesNoQuestion from './YesNoQuestion';
+import DropdownQuestion from './DropdownQuestion';
+import MultipleChoiceQuestion from './MultipleChoiceQuestion';
+import DateQuestion from './DateQuestion';
+import NumberQuestion from './NumberQuestion';
+import FileUploadQuestion from './FileUploadQuestion';
+import VideoQuestion from './VideoQuestion';
 
 function PersonalInfoForm() {
   const [questionsAndResponses, setQuestionsAndResponses] = useState([]);
@@ -52,6 +57,18 @@ function PersonalInfoForm() {
         return <ShortQuestion onSave={addQuestionAndResponse}/>;
       case 'Yes or No':
         return <YesNoQuestion onSave={addQuestionAndResponse}/>;
+      case 'Dropdown':
+        return <DropdownQuestion onSave={addQuestionAndResponse}/>;
+      case 'Multiple choice':
+        return <MultipleChoiceQuestion onSave={addQuestionAndResponse}/>;
+      case 'Date':
+        return <DateQuestion onSave={addQuestionAndResponse}/>;
+      case 'Number':
+        return <NumberQuestion onSave={addQuestionAndResponse}/>;
+      case 'File upload':
+        return <FileUploadQuestion onSave={addQuestionAndResponse}/>;
+      case 'Video question':
+        return <VideoQuestion onSave={addQuestionAndResponse}/>;
       default:
         return null;
     }
@@ -159,108 +176,6 @@ function PersonalInfoForm() {
           <label htmlFor="gender" className='info-label'>Gender</label>
           <input type="text" id="gender" name="gender" className='info-input gender-input'/>
         </div>
-
-        {selectedOption === 'Dropdown' && (
-          <>
-            <div>
-              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
-              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
-            </div>
-
-            <div className='row align-center unordered-choice'>
-              <img src={unorderedList} alt='unordered list'></img>
-              <div>
-                <label htmlFor="textarea-question" className='info-label textarea-label'>Choice</label>
-                <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' cols='40' rows="1" placeholder='Type here'/>
-              </div>
-              <img src={plusSign} alt='plus sign'></img>
-            </div>
-
-            <div className='yes-no-check align-center'>
-              <input type="checkbox" id="" name="" className='check-box'/>
-              <label htmlFor="" className=''>Enable "other" option</label>
-            </div>
-
-            <div className='row space-between align-center'>
-              <div className='row delete-question'>
-                <img src={closeIcon} alt='close icon'></img>
-                <p>Delete question</p>
-              </div>
-              <button className='save-btn'>Save</button>
-            </div>
-          </>
-        )}
-
-        {selectedOption === 'Multiple choice' && (
-          <>
-            <div>
-              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
-              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
-            </div>
-
-            <div className='row align-center unordered-choice'>
-              <img src={unorderedList} alt='unordered list'></img>
-              <div>
-                <label htmlFor="textarea-question" className='info-label textarea-label'>Choice</label>
-                <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' cols='40' rows="1" placeholder='Type here'/>
-              </div>
-              <img src={plusSign} alt='plus sign'></img>
-            </div>
-
-            <div className='yes-no-check align-center'>
-              <input type="checkbox" id="" name="" className='check-box'/>
-              <label htmlFor="" className=''>Enable "other" option</label>
-            </div>
-
-            <div>
-              <label htmlFor="textarea-question" className='info-label textarea-label'>Max choice allowed</label>
-              <input type='number' id="" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Enter number of choice allowed here'/>
-            </div>
-
-            <div className='row space-between align-center'>
-              <div className='row delete-question'>
-                <img src={closeIcon} alt='close icon'></img>
-                <p>Delete question</p>
-              </div>
-              <button className='save-btn'>Save</button>
-            </div>
-          </>
-        )}
-
-        {selectedOption === 'Date' && (
-          <>
-            <div>
-              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
-              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
-            </div>
-
-            <div className='row space-between align-center'>
-              <div className='row delete-question'>
-                <img src={closeIcon} alt='close icon'></img>
-                <p>Delete question</p>
-              </div>
-              <button className='save-btn'>Save</button>
-            </div>
-          </>
-        )}
-
-        {selectedOption === 'Number' && (
-          <>
-            <div>
-              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
-              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
-            </div>
-
-            <div className='row space-between align-center'>
-              <div className='row delete-question'>
-                <img src={closeIcon} alt='close icon'></img>
-                <p>Delete question</p>
-              </div>
-              <button className='save-btn'>Save</button>
-            </div>
-          </>
-        )}
-
         {selectedOption === 'File upload' && (
           <>
             <div>
@@ -357,6 +272,24 @@ function PersonalInfoForm() {
                     renderSelectedQuestion()
                   )}
                   {selectedOption === 'Yes or No' && (
+                    renderSelectedQuestion()
+                  )}
+                  {selectedOption === 'Dropdown' && (
+                    renderSelectedQuestion()
+                  )}
+                  {selectedOption === 'Multiple choice' && (
+                    renderSelectedQuestion()
+                  )}
+                  {selectedOption === 'Date' && (
+                    renderSelectedQuestion()
+                  )}
+                  {selectedOption === 'Number' && (
+                    renderSelectedQuestion()
+                  )}
+                  {selectedOption === 'File upload' && (
+                    renderSelectedQuestion()
+                  )}
+                  {selectedOption === 'Video question' && (
                     renderSelectedQuestion()
                   )}
                 </div>
