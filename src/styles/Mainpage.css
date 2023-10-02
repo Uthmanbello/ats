@@ -69,13 +69,16 @@
 }
 
 .upload-icon {
+  text-align: center;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .upload-sample {
   width: 28vw;
-  height: 28vh;
+  height: 32vh;
   margin: auto;
+  margin-top: -30px;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
