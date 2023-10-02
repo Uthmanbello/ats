@@ -26,7 +26,8 @@ function DateQuestion({ onSave }) {
     <>
       <div>
         <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
-        <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
+        <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here' value={question}
+          onChange={(e) => setQuestion(e.target.value)}/>
       </div>
 
       <div className='row space-between align-center'>
@@ -34,7 +35,7 @@ function DateQuestion({ onSave }) {
           <img src={closeIcon} alt='close icon'></img>
           <p>Delete question</p>
         </div>
-        <button className='save-btn'>Save</button>
+        <button className='save-btn' onClick={(e) => handleSaveClick(e)}>Save</button>
       </div>
     </>
   );

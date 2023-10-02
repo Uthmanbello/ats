@@ -176,51 +176,6 @@ function PersonalInfoForm() {
           <label htmlFor="gender" className='info-label'>Gender</label>
           <input type="text" id="gender" name="gender" className='info-input gender-input'/>
         </div>
-        {selectedOption === 'File upload' && (
-          <>
-            <div>
-              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
-              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
-            </div>
-
-            <div className='row space-between align-center'>
-              <div className='row delete-question'>
-                <img src={closeIcon} alt='close icon'></img>
-                <p>Delete question</p>
-              </div>
-              <button className='save-btn'>Save</button>
-            </div>
-          </>
-        )}
-
-        {selectedOption === 'Video question' && (
-          <>
-            <div>
-              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
-              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type question here'/>
-              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="4" placeholder='Type description here'/>
-            </div>
-
-            <div className='row video-duration'>
-              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Max duration of video'/>
-              <select id="textarea-question" name="textarea-question" className='info-input info-textarea'>
-                <option value="">in (sec/min)</option>
-                <option value="Paragraph">1</option>
-                <option value="Short answer">2</option>
-                <option value="Yes or No">3</option>
-                <option value="Dropdown">4</option>
-              </select>
-            </div>
-
-            <div className='row space-between align-center'>
-              <div className='row delete-question'>
-                <img src={closeIcon} alt='close icon'></img>
-                <p>Delete question</p>
-              </div>
-              <button className='save-btn'>Save</button>
-            </div>
-          </>
-        )}
 
         {questionsAndResponses.map((savedQuestion, index) => (
           <div key={index} className='saved-question'>
