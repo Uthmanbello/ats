@@ -164,7 +164,7 @@ function PictureUploadForm() {
                   height={150}
                   className='upload-sample'
                 />
-                <button onClick={handleDelete}>
+                <button onClick={handleDelete} className='preview-btn-delete'>
                   <div className='row delete-question delete-upload'>
                     <img src={closeIcon} alt='close icon'></img>
                     <p>Delete & re-upload</p>

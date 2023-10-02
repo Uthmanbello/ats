@@ -85,6 +85,13 @@
 
 .delete-upload {
   cursor: pointer;
+  text-align: left;
+}
+
+.preview-btn-delete {
+  display: flex;
+  align-items: left;
+  padding-left: 40px;
 }
 
 .btn-div {
