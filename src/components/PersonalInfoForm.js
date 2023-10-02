@@ -2,11 +2,31 @@ import React, { useState } from 'react';
 import plusSign from '../images/plus-sign.svg'
 import closeIcon from '../images/close-icon.svg'
 import unorderedList from '../images/unordered-list.svg'
+import editIcon from '../images/edit-icon.svg'
 import ParagraphQuestion from './ParagraphQuestion';
 import ShortQuestion from './ShortQuestion';
 import YesNoQuestion from './YesNoQuestion';
 
 function PersonalInfoForm() {
+  const [questionsAndResponses, setQuestionsAndResponses] = useState([]);
+  const addQuestionAndResponse = (question) => {
+    const newQuestion = {
+      questionText: question,
+      response: "",
+    };
+  
+    setQuestionsAndResponses([...questionsAndResponses, newQuestion]);
+  };
+  
+  const [question, setQuestion] = useState('');
+
+  const handleSaveClick = () => {
+    if (question.trim() !== '') {
+      addQuestionAndResponse(question);
+      setQuestion('');
+      setIsPopupOpen(false); 
+    }
+  };
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const openPopup = (e) => {
@@ -27,11 +47,11 @@ function PersonalInfoForm() {
   const renderSelectedQuestion = () => {
     switch (selectedOption) {
       case 'Paragraph':
-        return <ParagraphQuestion />;
+        return <ParagraphQuestion onSave={addQuestionAndResponse} />
       case 'Short answer':
-        return <ShortQuestion />;
+        return <ShortQuestion onSave={addQuestionAndResponse}/>;
       case 'Yes or No':
-        return <YesNoQuestion />;
+        return <YesNoQuestion onSave={addQuestionAndResponse}/>;
       default:
         return null;
     }
@@ -286,6 +306,20 @@ function PersonalInfoForm() {
             </div>
           </>
         )}
+
+        {questionsAndResponses.map((savedQuestion, index) => (
+          <div key={index} className='saved-question'>
+            <div className='row check-btns'>
+              <button className='align-center'>
+                <img src={editIcon} alt='edit icon' className='checkbox-label edit'></img>
+              </button>
+            </div>
+            <p className='top-label'>{selectedOption}</p>
+            <label htmlFor="yes-no" className='info-label add-questions-label'>{savedQuestion.questionText}</label>
+            <input type="text" id="yes-no" name="yes-no" className='info-input'/>
+          </div>
+        ))}
+
         <button className='row add-question align-center' onClick={(e) => openPopup(e)}>
           <img src={plusSign} alt='plus sign'></img>
           <p>Add a question</p>
