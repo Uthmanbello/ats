@@ -3,7 +3,7 @@ import closeIcon from '../images/close-icon.svg'
 import plusSign from '../images/plus-sign.svg'
 import unorderedList from '../images/unordered-list.svg'
 
-function DropdownQuestion({ onSave }) {
+function DropdownQuestion({ onSave, onClose }) {
   const [questionsAndResponses, setQuestionsAndResponses] = useState([]);
   const addQuestionAndResponse = (question) => {
     const newQuestion = {
@@ -21,6 +21,7 @@ function DropdownQuestion({ onSave }) {
     if (question.trim() !== '') {
       onSave(question);
       setQuestion('');
+      onClose();
     }
   };
 

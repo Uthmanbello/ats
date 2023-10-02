@@ -52,23 +52,23 @@ function PersonalInfoForm() {
   const renderSelectedQuestion = () => {
     switch (selectedOption) {
       case 'Paragraph':
-        return <ParagraphQuestion onSave={addQuestionAndResponse} />
+        return <ParagraphQuestion onSave={addQuestionAndResponse} onClose={closePopup} />
       case 'Short answer':
-        return <ShortQuestion onSave={addQuestionAndResponse}/>;
+        return <ShortQuestion onSave={addQuestionAndResponse} onClose={closePopup} />;
       case 'Yes or No':
-        return <YesNoQuestion onSave={addQuestionAndResponse}/>;
+        return <YesNoQuestion onSave={addQuestionAndResponse} onClose={closePopup} />;
       case 'Dropdown':
-        return <DropdownQuestion onSave={addQuestionAndResponse}/>;
+        return <DropdownQuestion onSave={addQuestionAndResponse} onClose={closePopup} />;
       case 'Multiple choice':
-        return <MultipleChoiceQuestion onSave={addQuestionAndResponse}/>;
+        return <MultipleChoiceQuestion onSave={addQuestionAndResponse} onClose={closePopup}/>;
       case 'Date':
-        return <DateQuestion onSave={addQuestionAndResponse}/>;
+        return <DateQuestion onSave={addQuestionAndResponse} onClose={closePopup} />;
       case 'Number':
-        return <NumberQuestion onSave={addQuestionAndResponse}/>;
+        return <NumberQuestion onSave={addQuestionAndResponse} onClose={closePopup} />;
       case 'File upload':
-        return <FileUploadQuestion onSave={addQuestionAndResponse}/>;
+        return <FileUploadQuestion onSave={addQuestionAndResponse} onClose={closePopup} />;
       case 'Video question':
-        return <VideoQuestion onSave={addQuestionAndResponse}/>;
+        return <VideoQuestion onSave={addQuestionAndResponse} onClose={closePopup} />;
       default:
         return null;
     }

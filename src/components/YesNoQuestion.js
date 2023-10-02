@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import closeIcon from '../images/close-icon.svg'
 
-function YesNoQuestion({ onSave }) {
+function YesNoQuestion({ onSave, onClose }) {
   const [questionsAndResponses, setQuestionsAndResponses] = useState([]);
   const addQuestionAndResponse = (question) => {
     const newQuestion = {
@@ -19,6 +19,7 @@ function YesNoQuestion({ onSave }) {
     if (question.trim() !== '') {
       onSave(question);
       setQuestion('');
+      onClose();
     }
   };
 
