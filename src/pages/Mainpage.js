@@ -2,7 +2,6 @@ import React from 'react';
 import PictureUploadForm from '../components/PictureUploadForm';
 import PersonalInfoForm from '../components/PersonalInfoForm';
 import ProfileForm from '../components/ProfileForm';
-import AdditionalQuestionsForm from '../components/AdditionalQuestionsForm';
 import '../styles/Mainpage.css';
 import '../styles/Popup.css';
 import ApplicationForm from '../components/Test';
@@ -26,7 +25,6 @@ function Mainpage() {
               <PictureUploadForm />
               <PersonalInfoForm />
               <ProfileForm />
-              <AdditionalQuestionsForm />
               <ApplicationForm />
             </div>
         </form>
