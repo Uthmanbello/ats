@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import uploadIcon from '../images/upload-icon.svg';
+import closeIcon from '../images/close-icon.svg';
 
 function PictureUploadForm() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -25,14 +26,6 @@ function PictureUploadForm() {
     }
     setEditing(false);
   };
-
-//   const handleEdit = () => {
-//     // Allow the user to edit the photo (e.g., trigger the file input click).
-//     const fileInput = document.getElementById('fileInput');
-//     if (fileInput) {
-//       fileInput.click();
-//     }
-//   };
 
   return (
     <div className='form-div'>
@@ -68,9 +61,15 @@ function PictureUploadForm() {
                 alt="Selected"
                 width={150}
                 height={150}
+                className='upload-sample'
               />
-              <button onClick={handleUpload}>Upload</button>
-              <button onClick={handleDelete}>Cancel</button>
+              {/* <button onClick={handleUpload}>Upload</button> */}
+              <button onClick={handleDelete}>
+                <div className='row delete-question delete-upload'>
+                  <img src={closeIcon} alt='close icon'></img>
+                  <p>Delete & re-upload</p>
+                </div>
+              </button>
             </div>
           )}
           <div>      
