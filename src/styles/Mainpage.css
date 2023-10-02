@@ -207,6 +207,7 @@
   padding: 12px;
   padding-left: 15px;
   resize: none;
+  border-radius: 5px;
 }
 
 .info-textarea::placeholder {

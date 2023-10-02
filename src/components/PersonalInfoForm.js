@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import plusSign from '../images/plus-sign.svg'
 import closeIcon from '../images/close-icon.svg'
+import unorderedList from '../images/unordered-list.svg'
 
 function PersonalInfoForm() {
 
@@ -178,6 +179,153 @@ function PersonalInfoForm() {
             </div>
           </>
         )}
+
+        {selectedOption === 'Dropdown' && (
+          <>
+            <div>
+              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
+              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
+            </div>
+
+            <div className='row align-center unordered-choice'>
+              <img src={unorderedList} alt='unordered list'></img>
+              <div>
+                <label htmlFor="textarea-question" className='info-label textarea-label'>Choice</label>
+                <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' cols='40' rows="1" placeholder='Type here'/>
+              </div>
+              <img src={plusSign} alt='plus sign'></img>
+            </div>
+
+            <div className='yes-no-check align-center'>
+              <input type="checkbox" id="" name="" className='check-box'/>
+              <label htmlFor="" className=''>Enable "other" option</label>
+            </div>
+
+            <div className='row space-between align-center'>
+              <div className='row delete-question'>
+                <img src={closeIcon} alt='close icon'></img>
+                <p>Delete question</p>
+              </div>
+              <button className='save-btn'>Save</button>
+            </div>
+          </>
+        )}
+
+        {selectedOption === 'Multiple choice' && (
+          <>
+            <div>
+              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
+              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
+            </div>
+
+            <div className='row align-center unordered-choice'>
+              <img src={unorderedList} alt='unordered list'></img>
+              <div>
+                <label htmlFor="textarea-question" className='info-label textarea-label'>Choice</label>
+                <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' cols='40' rows="1" placeholder='Type here'/>
+              </div>
+              <img src={plusSign} alt='plus sign'></img>
+            </div>
+
+            <div className='yes-no-check align-center'>
+              <input type="checkbox" id="" name="" className='check-box'/>
+              <label htmlFor="" className=''>Enable "other" option</label>
+            </div>
+
+            <div>
+              <label htmlFor="textarea-question" className='info-label textarea-label'>Max choice allowed</label>
+              <input type='number' id="" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Enter number of choice allowed here'/>
+            </div>
+
+            <div className='row space-between align-center'>
+              <div className='row delete-question'>
+                <img src={closeIcon} alt='close icon'></img>
+                <p>Delete question</p>
+              </div>
+              <button className='save-btn'>Save</button>
+            </div>
+          </>
+        )}
+
+        {selectedOption === 'Date' && (
+          <>
+            <div>
+              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
+              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
+            </div>
+
+            <div className='row space-between align-center'>
+              <div className='row delete-question'>
+                <img src={closeIcon} alt='close icon'></img>
+                <p>Delete question</p>
+              </div>
+              <button className='save-btn'>Save</button>
+            </div>
+          </>
+        )}
+
+        {selectedOption === 'Number' && (
+          <>
+            <div>
+              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
+              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
+            </div>
+
+            <div className='row space-between align-center'>
+              <div className='row delete-question'>
+                <img src={closeIcon} alt='close icon'></img>
+                <p>Delete question</p>
+              </div>
+              <button className='save-btn'>Save</button>
+            </div>
+          </>
+        )}
+
+        {selectedOption === 'File upload' && (
+          <>
+            <div>
+              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
+              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
+            </div>
+
+            <div className='row space-between align-center'>
+              <div className='row delete-question'>
+                <img src={closeIcon} alt='close icon'></img>
+                <p>Delete question</p>
+              </div>
+              <button className='save-btn'>Save</button>
+            </div>
+          </>
+        )}
+
+        {selectedOption === 'Video question' && (
+          <>
+            <div>
+              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
+              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type question here'/>
+              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="4" placeholder='Type description here'/>
+            </div>
+
+            <div className='row video-duration'>
+              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Max duration of video'/>
+              <select id="textarea-question" name="textarea-question" className='info-input info-textarea'>
+                <option value="">in (sec/min)</option>
+                <option value="Paragraph">1</option>
+                <option value="Short answer">2</option>
+                <option value="Yes or No">3</option>
+                <option value="Dropdown">4</option>
+              </select>
+            </div>
+
+            <div className='row space-between align-center'>
+              <div className='row delete-question'>
+                <img src={closeIcon} alt='close icon'></img>
+                <p>Delete question</p>
+              </div>
+              <button className='save-btn'>Save</button>
+            </div>
+          </>
+        )}
         <button className='row add-question align-center' onClick={(e) => openPopup(e)}>
           <img src={plusSign} alt='plus sign'></img>
           <p>Add a question</p>
@@ -200,12 +348,12 @@ function PersonalInfoForm() {
                       <option value="Paragraph">Paragraph</option>
                       <option value="Short answer">Short answer</option>
                       <option value="Yes or No">Yes or No</option>
-                      <option value="option4">Dropdown</option>
-                      <option value="option5">Multiple choice</option>
-                      <option value="option6">Date</option>
-                      <option value="option7">Number</option>
-                      <option value="option8">File upload</option>
-                      <option value="option9">Video question</option>
+                      <option value="Dropdown">Dropdown</option>
+                      <option value="Multiple choice">Multiple choice</option>
+                      <option value="Date">Date</option>
+                      <option value="Number">Number</option>
+                      <option value="File upload">File upload</option>
+                      <option value="Video question">Video question</option>
                     </select>
                   </div>
                 </div>

@@ -44,3 +44,14 @@
   font-size: 0.8rem;
   margin-left: 5px;
 }
+
+.video-duration {
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.video-duration select{
+  width: 70%;
+  font-size: 0.7rem;
+  color: #5c5c5c;
+}
