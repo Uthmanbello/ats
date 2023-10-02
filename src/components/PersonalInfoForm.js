@@ -14,10 +14,11 @@ function PersonalInfoForm() {
     setIsPopupOpen(false);
   };
 
-  const [selectedOption, setSelectedOption] = useState('Paragraph');
+  const [selectedOption, setSelectedOption] = useState('null');
 
   const handleSelectChange = (e) => {
     setSelectedOption(e.target.value);
+    closePopup();
   };
 
   return (
@@ -122,7 +123,61 @@ function PersonalInfoForm() {
           <label htmlFor="gender" className='info-label'>Gender</label>
           <input type="text" id="gender" name="gender" className='info-input gender-input'/>
         </div>
+        {selectedOption === 'Paragraph' && (
+          <>
+            <div>
+              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
+              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
+            </div>
 
+            <div className='row space-between align-center'>
+              <div className='row delete-question'>
+                <img src={closeIcon} alt='close icon'></img>
+                <p>Delete question</p>
+              </div>
+              <button className='save-btn'>Save</button>
+            </div>
+          </>
+        )}
+
+        {selectedOption === 'Short answer' && (
+          <>
+            <div>
+              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
+              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
+            </div>
+
+            <div className='row space-between align-center'>
+              <div className='row delete-question'>
+                <img src={closeIcon} alt='close icon'></img>
+                <p>Delete question</p>
+              </div>
+              <button className='save-btn'>Save</button>
+            </div>
+          </>
+        )}
+
+        {selectedOption === 'Yes or No' && (
+          <>
+            <div>
+              <label htmlFor="textarea-question" className='info-label textarea-label'>Question</label>
+              <textarea id="textarea-question" name="textarea-question" className='info-input info-textarea' rows="1" placeholder='Type here'/>
+            </div>
+
+            <div className='yes-no-check align-center'>
+              <input type="checkbox" id="" name="" className='check-box'/>
+              <label htmlFor="" className=''>Disqualify the candidate if the answer is no</label>
+            </div>
+
+            <div className='row space-between align-center'>
+              <div className='row delete-question'>
+                <img src={closeIcon} alt='close icon'></img>
+                <p>Delete question</p>
+              </div>
+              <button className='save-btn'>Save</button>
+            </div>
+          </>
+        )}
         <button className='row add-question align-center' onClick={(e) => openPopup(e)}>
           <img src={plusSign} alt='plus sign'></img>
           <p>Add a question</p>
@@ -141,9 +196,10 @@ function PersonalInfoForm() {
                   <div>
                     <label htmlFor="dropdown" className='info-label'>Type</label>
                     <select id="dropdown" className='info-input info-textarea' value={selectedOption} onChange={handleSelectChange}>
-                      <option value="option1">Paragraph</option>
-                      <option value="option2">Short answer</option>
-                      <option value="option3">Yes/No</option>
+                      <option value="">Select type</option>
+                      <option value="Paragraph">Paragraph</option>
+                      <option value="Short answer">Short answer</option>
+                      <option value="Yes or No">Yes or No</option>
                       <option value="option4">Dropdown</option>
                       <option value="option5">Multiple choice</option>
                       <option value="option6">Date</option>
@@ -151,7 +207,6 @@ function PersonalInfoForm() {
                       <option value="option8">File upload</option>
                       <option value="option9">Video question</option>
                     </select>
-                    {/* <p>Selected Option: {selectedOption}</p> */}
                   </div>
                 </div>
               </div>
