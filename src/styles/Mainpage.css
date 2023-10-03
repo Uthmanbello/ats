@@ -68,6 +68,32 @@
   padding: 8% 6%;
 }
 
+.upload-icon {
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.upload-sample {
+  width: 28vw;
+  height: 32vh;
+  margin: auto;
+  margin-top: -30px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.delete-upload {
+  cursor: pointer;
+  text-align: left;
+}
+
+.preview-btn-delete {
+  display: flex;
+  align-items: left;
+  padding-left: 40px;
+}
+
 .btn-div {
   background-color: #ffffff;
   border: 1px dashed black;
@@ -79,6 +105,7 @@
   background-color: #ffffff;
   font-weight: bolder;
   border: none;
+  cursor: pointer;
 }
 
 .btn-div p {
